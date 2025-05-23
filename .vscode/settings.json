@@ -24,6 +24,14 @@
   "[prisma]": {},
   "[typescript]": {},
   "[javascript]": {},
+  "[tailwindcss]": {
+    "tailwindCSS.experimental.classRegex": [
+      [
+        "clsx\\(([^)]*)\\)",
+        "(?:'|\"|`)([^']*)(?:'|\"|`)"
+      ]
+    ]
+  },
   "cSpell.customDictionaries": {
     "project-words": {
       "name": "project-words",
