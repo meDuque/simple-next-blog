@@ -33,9 +33,3 @@ export class JsonPostRepository implements PostRepository {
     return post
   }
 }
-
-export const postRepository: PostRepository = new JsonPostRepository()
-// ;(async () => {
-//   const posts = await postRepository.findAll()
-//   console.log(posts)
-// })()
