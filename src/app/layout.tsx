@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Container } from '@/components/Container'
+import { Footer } from '@/components/Footer'
 
 export enum AppTitleMetadata {
   APP_TITLE = 'The blog',
@@ -28,11 +29,7 @@ export default function RootLayout({
 
           {children}
 
-          <footer>
-            <p className='text-6xl font-bold text-center py-8'>
-              Aqui é a footer
-            </p>
-          </footer>
+          <Footer />
         </Container>
       </body>
     </html>

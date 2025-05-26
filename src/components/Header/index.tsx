@@ -1,3 +1,4 @@
+import { AppTitleMetadata } from '@/app/layout'
 import clsx from 'clsx'
 import Link from 'next/link'
 
@@ -13,7 +14,9 @@ export function Header() {
             'lg:text-7xl/normal lg:py-12',
           )}
         >
-          <Link href='#'>The Blog</Link>
+          <Link className='hover:text-slate-500 transition delay-75' href={'/'}>
+            {AppTitleMetadata.APP_TITLE}
+          </Link>
         </h1>
       </header>
     </>
