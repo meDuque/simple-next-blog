@@ -1,5 +1,5 @@
-import { PostHeading } from '../PostHeading'
 import { PostCoverImage } from '../PostCoverImage'
+import { PostSummary } from '../PostSummary'
 
 // interface PostFeaturedProps {
 //   children?: React.ReactNode
@@ -23,25 +23,15 @@ export function PostFeatured() {
           }}
         />
 
-        <div className='flex flex-col gap-4 sm:justify-center'>
-          <time
-            className='text-slate-600 block text-sm/tight'
-            dateTime='2025-05-23'
-          >
-            23/05/2025 10:00
-          </time>
-
-          <PostHeading as='h1' url={postLink}>
-            Delectus porro officiis
-          </PostHeading>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
-            inventore consectetur distinctio, maxime eaque libero temporibus
-            repudiandae nulla at. Delectus porro officiis, quam omnis libero
-            facilis. Dicta porro omnis dolor.
-          </p>
-        </div>
+        <PostSummary
+          postHeading={'h1'}
+          postLink={postLink}
+          createdAt={'2025-04-08T00:24:38.616Z'}
+          title={'Rotina matinal de pessoas altamente eficazes'}
+          excerpt={
+            'O Next.js também é uma boa escolha para quem quer se preocupar com performance e SEO.'
+          }
+        />
       </section>
     </>
   )
