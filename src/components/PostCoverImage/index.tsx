@@ -1,25 +1,31 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ReactNode } from 'react'
 
 interface PostCoverImageProps {
-  children?: ReactNode
+  imageProps: React.ComponentProps<typeof Image>
+  linkProps: React.ComponentProps<typeof Link>
 }
 
-export function PostCoverImage({ children }: PostCoverImageProps) {
+export function PostCoverImage({ linkProps, imageProps }: PostCoverImageProps) {
   return (
     <>
-      <Link className='w-full h-full overflow-hidden rounded-xl' href={'#'}>
+      <Link
+        className={clsx(
+          'w-full h-full overflow-hidden rounded-xl',
+          linkProps.className,
+        )}
+        {...linkProps}
+      >
         <Image
-          className='w-full h-full object-cover object-center group-hover:scale-105 transition'
-          src={'/images/bryen_0.png'}
-          alt={'Titulo do post'}
-          width={1200}
-          height={720}
-          priority
+          className={clsx(
+            'w-full h-full object-cover object-center group-hover:scale-105 transition',
+            imageProps.className,
+          )}
+          {...imageProps}
+          alt={imageProps.alt}
         />
       </Link>
-      {children}
     </>
   )
 }

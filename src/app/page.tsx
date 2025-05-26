@@ -13,7 +13,16 @@ export default async function Home() {
         <Header />
 
         <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
-          <PostCoverImage />
+          <PostCoverImage
+            linkProps={{ href: '#' }}
+            imageProps={{
+              src: '/images/bryen_5.png',
+              alt: 'Post cover image',
+              width: 1200,
+              height: 720,
+              priority: true,
+            }}
+          />
 
           <div className='flex flex-col gap-4 sm:justify-center'>
             <time
