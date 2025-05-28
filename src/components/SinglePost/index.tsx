@@ -1,14 +1,15 @@
-import { ReactNode } from 'react'
+import { findPostBySlugCached } from '@/lib/post/queries'
 
 interface SinglePostProps {
-  children?: ReactNode
+  slug: string
 }
 
-export function SinglePost({ children }: SinglePostProps) {
+export async function SinglePost({ slug }: SinglePostProps) {
+  const post = await findPostBySlugCached(slug)
+
   return (
-    <>
-      <h1>SinglePost</h1>
-      {children}
-    </>
+    <div>
+      <p>{post.content}</p>
+    </div>
   )
 }
