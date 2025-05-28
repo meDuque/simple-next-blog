@@ -1,14 +1,10 @@
-import { ReactNode } from 'react'
-
-interface SlugProps {
-  children: ReactNode
+interface PostSlugPageProps {
+  params: Promise<{ slug: string }>
 }
 
-export default function SinglePagePost({ children }: SlugProps) {
+export default async function PostSlugPage({ params }: PostSlugPageProps) {
+  const { slug } = await params
   return (
-    <>
-      <h1>Slug</h1>
-      {children}
-    </>
+    <h1 className='text-7xl font-extrabold py-16'>Rota dinâmica: {slug}</h1>
   )
 }
