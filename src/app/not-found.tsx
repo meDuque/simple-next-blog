@@ -4,6 +4,7 @@ import Link from 'next/link'
 export default function NotFoundPage() {
   return (
     <>
+      <title>Página não encontrada</title>
       <div
         className={clsx(
           'min-h-[320px] bg-slate-900 text-slate-100 mb-16 p-8 rounded-xl flex flex-col gap-5 items-center justify-center text-center',
