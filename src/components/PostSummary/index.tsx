@@ -1,6 +1,6 @@
-import { FormatRelativeDate, FormatDateTime } from '@/utils/format-datetime'
 import { ReactNode } from 'react'
 import { PostHeading } from '../PostHeading'
+import { PostDate } from '../PostDate'
 
 interface PostSummaryProps {
   children?: ReactNode
@@ -22,13 +22,7 @@ export function PostSummary({
   return (
     <>
       <div className='flex flex-col gap-4 sm:justify-center'>
-        <time
-          className='text-slate-600 block text-sm/tight'
-          dateTime={createdAt}
-          title={FormatRelativeDate(createdAt)}
-        >
-          {FormatDateTime(createdAt)}
-        </time>
+        <PostDate datetime={createdAt} />
 
         <PostHeading as={postHeading} url={postLink}>
           {title}
