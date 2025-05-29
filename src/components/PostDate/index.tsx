@@ -8,7 +8,7 @@ export function PostDate({ datetime }: PostDateProps) {
   return (
     <>
       <time
-        className='text-slate-600 block text-sm/tight'
+        className='text-slate-600 text-sm/tight'
         dateTime={datetime}
         title={FormatRelativeDate(datetime)}
       >
